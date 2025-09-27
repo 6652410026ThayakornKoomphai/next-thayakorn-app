@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Libre_Franklin as Prompt } from "next/font/google";
 import "./globals.css";
 import LeftBar from "../components/LeftBar";
-// import RightBar from "../components/RightBar";
+import RightBar from "../components/RightBar";
 
 const prompt = Prompt({
   subsets: ["latin"],
@@ -35,6 +35,9 @@ export default function RootLayout({
         <div className="min-h-screen relative">
           <div className="fixed left-10 top-1/2 transform -translate-y-1/2 z-40">
             <LeftBar />
+          </div>
+          <div className="fixed right-2.5 top-1/2 transform -translate-y-1/2 z-40">
+            <RightBar />
           </div>
           <div className="px-4 md:px-80">
             <main className="py-8 max-w-full">{children}</main>
