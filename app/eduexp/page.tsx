@@ -61,7 +61,6 @@ const App = () => {
             <span className="text-orange-500">Experience</span>
           </h2>
 
-          {/* ปรับใช้ flex/block แทน grid เพื่อให้เรียงลงมาเป็นคอลัมน์เดียว */}
           <div className="flex flex-col"> 
             {timelineData.map((item, index) => (
               <TimelineItem key={index} data={item} />

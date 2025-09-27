@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function NavVerticalBar() {
+export default function RightBar() {
   return (
     <div className="flex flex-col gap-2 h-fit bg-zinc-800 hover:bg-zinc-700 transition-all duration-300 rounded-4xl px-2 py-2 w-fit text-white my-auto">
       <Link href="/">

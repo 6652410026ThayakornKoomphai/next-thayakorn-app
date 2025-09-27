@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-export default function Profile() {
+export default function LeftBar() {
   return (
     <div className="flex flex-col items-center bg-zinc-800 rounded-xl px-4 py-2 w-fit">
       <div className="w-full">

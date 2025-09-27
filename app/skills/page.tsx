@@ -9,7 +9,7 @@ const skills = [
   { name: 'GitHub', percent: '90%', iconPlaceholder: '🐈' },
 ];
 
-const SkillItem = ({ name, percent }) => {
+const SkillItem = ({ name, percent, iconPlaceholder }: { name: string, percent: string, iconPlaceholder: string }) => {
   const isDarkIcon = name === 'Next.js' || name === 'GitHub';
   const iconColor = isDarkIcon ? 'text-white' : 'text-[#61DAFB]'; 
   const percentColor = 'text-[#ff7f2a]';
@@ -26,12 +26,7 @@ const SkillItem = ({ name, percent }) => {
         style={circleStyle}
       >
         <span className={`text-5xl font-extrabold ${iconColor}`}>
-            {name === 'Next.js' && <div className="text-white font-extrabold text-7xl mb-1">N</div>}
-            {name === 'HTML/CSS' && <div className="text-white font-extrabold text-5xl mb-1">3</div>}
-            {name === 'React' && <div className="text-[#61DAFB] text-6xl">⚛️</div>}
-            {name === 'Figma' && <div className="text-white text-5xl">🇫</div>}
-            {name === 'Java Script' && <div className="text-[#F7DF1E] text-5xl">JS</div>}
-            {name === 'GitHub' && <div className="text-white text-5xl">🐈</div>}
+          {iconPlaceholder}
         </span>
         <span className={`text-lg font-bold ${percentColor} mt-1`}>{percent}</span>
       </div>

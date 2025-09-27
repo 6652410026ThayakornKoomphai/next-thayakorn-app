@@ -36,7 +36,7 @@ export default function RootLayout({
           <div className="fixed left-10 top-1/2 transform -translate-y-1/2 z-40">
             <LeftBar />
           </div>
-          <div className="fixed right-2.5 top-1/2 transform -translate-y-1/2 z-40">
+          <div className="fixed right-10 top-1/2 transform -translate-y-1/2 z-40">
             <RightBar />
           </div>
           <div className="px-4 md:px-80">

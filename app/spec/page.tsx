@@ -23,12 +23,10 @@ const Specializations = () => {
   return (
     <div className="min-h-screen bg-[#1E1E1E] p-4 sm:p-8 flex justify-center items-start pt-16 font-inter">
       <div className="w-full max-w-xl">
-        {/* Title Section */}
         <h1 className="text-4xl sm:text-5xl font-bold mb-10 text-white">
           My <span className="text-orange-500">Specializations</span>
         </h1>
 
-        {/* Specialization Cards Container */}
         <div className="space-y-6">
           {specializationsData.map((item, index) => (
             <div

@@ -1,8 +1,13 @@
 import React from 'react';
 const App = () => {
-  // ลบ Logic, State, และ Handler ออกทั้งหมด คงไว้เฉพาะโครงสร้างและ Props ที่จำเป็น
+  interface InputFieldProps {
+  label: string;
+  name: string;
+  type?: string;
+  className?: string;
+}
 
-  const InputField = ({ label, name, type = 'text', className = '' }) => (
+  const InputField: React.FC<InputFieldProps> = ({ label, name, type = 'text', className = '' }) => (
     <div className={`relative ${className}`}>
       <label 
         htmlFor={name}
@@ -14,7 +19,6 @@ const App = () => {
         id={name}
         name={name}
         type={type}
-        // ลบ value/onChange ออก
         className="mt-1 block w-full bg-transparent border-0 border-b border-gray-500 focus:border-b-2 focus:border-orange-500 focus:ring-0 text-white pb-1 transition-all duration-300 placeholder-transparent outline-none"
       />
     </div>
@@ -36,23 +40,19 @@ const App = () => {
             Let{"'"}s get in touch!
           </p>
 
-          {/* ลบ Message Alert ออก */}
-
-          <form /* ลบ onSubmit ออก */ className="space-y-10">
+          <form className="space-y-10">
             
-            {/* Input Row 1: Email, Phone */}
+            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10">
               <InputField label="Email" name="email" type="email" />
               <InputField label="Phone" name="phone" type="tel" />
             </div>
 
-            {/* Input Row 2: Name, Address */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10">
               <InputField label="Name" name="name" />
               <InputField label="Address" name="address" />
             </div>
 
-            {/* Content Textarea */}
             <div>
               <label 
                 htmlFor="content" 
@@ -63,7 +63,7 @@ const App = () => {
               <textarea
                 id="content"
                 name="content"
-                rows="4"
+                rows= {4}
                 className="mt-1 block w-full bg-transparent border-0 border-b border-gray-500 focus:border-b-2 focus:border-orange-500 focus:ring-0 text-white pt-2 pb-1 transition-all duration-300 outline-none resize-none"
               ></textarea>
             </div>
